@@ -8,11 +8,11 @@
 
     <EditText
         android:id="@+id/input_text"
+        style="@style/AppTheme.InputCalculatorText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:padding="8dp"
-        android:text="New Text" />
+        android:text="000" />
 
     <android.support.v7.widget.GridLayout
         android:layout_width="match_parent"
@@ -25,6 +25,7 @@
         <Button
             android:id="@+id/clear_button"
             android:text="C"
+            android:theme="@style/AppTheme.DangerButton"
             app:layout_column="0" />
 
         <Button
@@ -92,6 +93,7 @@
         <Button
             android:id="@+id/equal_button"
             android:text="="
+            android:theme="@style/AppTheme.SuccessButton"
             app:layout_gravity="fill"
             app:layout_rowSpan="2" />
 
