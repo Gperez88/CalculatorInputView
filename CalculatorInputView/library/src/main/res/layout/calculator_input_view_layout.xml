@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/calculator_input_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="16dp"
@@ -14,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:text="000" />
 
-    <android.support.v7.widget.GridLayout
+     <android.support.v7.widget.GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -40,7 +41,7 @@
 
         <Button
             android:id="@+id/delete_button"
-            android:text="<"
+            android:text="DEL"
             app:layout_column="3"
             app:layout_gravity="fill" />
 
