@@ -1,4 +1,5 @@
 # CalculatorInputView
+With CalculatorInputView you can add functionality to a calculation EDITTEXT.
 
 ## Usage
 
