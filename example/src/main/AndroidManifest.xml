@@ -15,6 +15,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- CalculatorActivity -->
+        <activity
+            android:name="com.gp89developers.calculatorinputview.activities.CalculatorActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.gp89developers.calculatorinputview.activities.CalculatorActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

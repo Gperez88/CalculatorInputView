@@ -1,1 +1,1 @@
-include ':calculatorInputView'
+include ':calculatorInputView', ':example'

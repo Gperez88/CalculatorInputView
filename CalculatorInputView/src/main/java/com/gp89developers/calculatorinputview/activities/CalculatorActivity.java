@@ -1,10 +1,9 @@
 package com.gp89developers.calculatorinputview.activities;
 
 import android.content.Intent;
-import android.os.PersistableBundle;
+import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.InputFilter;
 import android.text.TextUtils;
 import android.view.View;
@@ -16,10 +15,8 @@ import android.widget.TextView;
 import com.gp89developers.calculatorinputview.R;
 import com.gp89developers.calculatorinputview.utils.Operators;
 
-import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
-import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
