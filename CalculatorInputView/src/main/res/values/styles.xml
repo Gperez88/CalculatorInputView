@@ -8,10 +8,19 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.OperationCalculatorText" parent="@style/TextAppearance.AppCompat.Subhead">
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:gravity">end</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
     <style name="AppTheme.InputCalculatorText" parent="Base.V7.Widget.AppCompat.EditText">
         <item name="android:layout_margin">8dp</item>
         <item name="android:focusable">false</item>
         <item name="android:inputType">none</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:enabled">false</item>
         <item name="android:padding">8dp</item>
         <item name="android:textSize">24sp</item>
         <item name="android:textStyle">bold</item>
