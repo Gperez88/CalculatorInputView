@@ -1,9 +1,9 @@
 # CalculatorInputView
 With CalculatorInputView you can add functionality to a calculation EDITTEXT.
 
-![](https://github.com/Gperez88/CalculatorInputView/blob/develop/screen/c1.png)
-![](https://github.com/Gperez88/CalculatorInputView/blob/develop/screen/c2.png)
-![](https://github.com/Gperez88/CalculatorInputView/blob/develop/screen/c3.png)
+![](https://github.com/Gperez88/CalculatorInputView/blob/master/screen/c1.png)
+![](https://github.com/Gperez88/CalculatorInputView/blob/master/screen/c2.png)
+![](https://github.com/Gperez88/CalculatorInputView/blob/master/screen/c3.png)
 
 
 ## Usage
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
 ```
 # Example
 
-[Example app](https://github.com/Gperez88/CalculatorInputView/tree/develop/example)
+[Example app](https://github.com/Gperez88/CalculatorInputView/tree/master/example)
 
 # License
 
