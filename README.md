@@ -8,6 +8,13 @@ With CalculatorInputView you can add functionality to a calculation EDITTEXT.
 
 ## Usage
 
+### Add the dependencies to your gradle file:
+```java
+  dependencies {
+        compile 'com.github.gperez88:calculatorInputView:0.0.1'
+    }
+```
+
 #### Manifest
 ```xml
 <!-- CalculatorActivity -->
