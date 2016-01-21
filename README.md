@@ -1,6 +1,11 @@
 # CalculatorInputView
 With CalculatorInputView you can add functionality to a calculation EDITTEXT.
 
+![](https://github.com/Gperez88/CalculatorInputView/blob/develop/screen/c1.png)
+![](https://github.com/Gperez88/CalculatorInputView/blob/develop/screen/c2.png)
+![](https://github.com/Gperez88/CalculatorInputView/blob/develop/screen/c3.png)
+
+
 ## Usage
 
 #### Manifest
