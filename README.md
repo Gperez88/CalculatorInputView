@@ -1,8 +1,8 @@
 # CalculatorInputView
 
-## Configuration
+## Usage
 
-### Manifest
+#### Manifest
 ```xml
 <!-- CalculatorActivity -->
 <activity
@@ -15,7 +15,7 @@
 </activity>
 ```
 
-### Layout 
+#### Layout 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -40,7 +40,7 @@
 </RelativeLayout>
 ```
 
-### Activity
+#### Activity
 ```java
 public class MainActivity extends AppCompatActivity {
     public static final String PARENT_CLASS_SOURCE = "com.gp89developers.example.MainActivity";
@@ -78,5 +78,16 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
+# Example
 
 [Example app](https://github.com/Gperez88/CalculatorInputView/tree/develop/example)
+
+# License
+
+Copyright 2015 Gabriel Perez.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+[Apache License, Version 2.0](https://github.com/Gperez88/CalculatorInputView/blob/master/LICENSE)
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
