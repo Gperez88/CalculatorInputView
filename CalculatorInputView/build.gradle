@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'calculator-input-view'
+
+    publishedGroupId = 'com.github.gperez88'
+    libraryName = 'CalculatorInputView'
+    artifact = 'calculatorInputView'
+
+    libraryDescription = 'With CalculatorInputView you can add functionality to a calculation EditText Android'
+
+    siteUrl = 'https://github.com/Gperez88/CalculatorInputView'
+    gitUrl = 'https://github.com/Gperez88/CalculatorInputView.git'
+
+    libraryVersion = '0.0.1'
+
+    developerId = 'gperez88'
+    developerName = 'gabriel perez'
+    developerEmail = 'perezgabriel89@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
@@ -8,7 +32,7 @@ android {
         minSdkVersion 10
         targetSdkVersion 23
         versionCode 1
-        versionName "1.0"
+        versionName "0.0.1"
     }
     buildTypes {
         release {
@@ -25,3 +49,6 @@ dependencies {
     compile 'com.android.support:gridlayout-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
