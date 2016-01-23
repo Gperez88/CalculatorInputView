@@ -8,6 +8,9 @@ import android.widget.EditText;
 
 import com.gp89developers.calculatorinputview.activities.CalculatorActivity;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+
 public class MainActivity extends AppCompatActivity {
     public static final String PARENT_CLASS_SOURCE = "com.gp89developers.example.MainActivity";
     public static final String TITLE = "CalculatorInputView";
