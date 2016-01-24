@@ -143,6 +143,7 @@ public class CalculatorActivity extends AppCompatActivity {
 
     private void initComponents() {
         DecimalFormatSymbols decimalFormatSymbols = new DecimalFormatSymbols();
+        decimalFormatSymbols.setGroupingSeparator(',');
         decimalFormatSymbols.setDecimalSeparator('.');
         decimalFormat = new DecimalFormat("#,###,##0.00", decimalFormatSymbols);
 

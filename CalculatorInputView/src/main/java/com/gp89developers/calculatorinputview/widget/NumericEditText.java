@@ -17,8 +17,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NumericEditText extends EditText {
-    private final char GROUPING_SEPARATOR = DecimalFormatSymbols.getInstance().getGroupingSeparator();
-    private final char DECIMAL_SEPARATOR = DecimalFormatSymbols.getInstance().getDecimalSeparator();
+    private final char GROUPING_SEPARATOR = ',';
+    private final char DECIMAL_SEPARATOR = '.';
     private final String LEADING_ZERO_FILTER_REGEX = "^0+(?!$)";
 
     private String mDefaultText = null;
