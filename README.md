@@ -11,7 +11,7 @@ With CalculatorInputView you can add functionality to a calculation EDITTEXT.
 ### Add the dependencies to your gradle file:
 ```java
   dependencies {
-        compile 'com.github.gperez88:calculatorInputView:0.0.1'
+        compile 'com.github.gperez88:calculatorInputView:0.0.3'
   }
 ```
 

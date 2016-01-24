@@ -17,16 +17,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="616e4a9d-3aab-4b44-ba28-b78d52b4da37" name="Default" comment="formating number.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/calculatorInputView/src/main/java/com/gp89developers/calculatorinputview/widget/NumericEditText.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="C:\Users\gabriel\Documents\Projects\Android\CalculatorInputView\calculatorInputView\CalculatorInputView.iml" afterPath="$PROJECT_DIR$/calculatorInputView/calculatorInputView.iml" />
-      <change type="MODIFICATION" beforePath="C:\Users\gabriel\Documents\Projects\Android\CalculatorInputView\calculatorInputView\src\main\java\com\gp89developers\calculatorinputview\activities\CalculatorActivity.java" afterPath="$PROJECT_DIR$/calculatorInputView/src/main/java/com/gp89developers/calculatorinputview/activities/CalculatorActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example/src/main/java/com/gp89developers/example/MainActivity.java" afterPath="$PROJECT_DIR$/example/src/main/java/com/gp89developers/example/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="C:\Users\gabriel\Documents\Projects\Android\CalculatorInputView\calculatorInputView\src\main\res\layout\activity_caculator.xml" afterPath="$PROJECT_DIR$/calculatorInputView/src/main/res/layout/activity_caculator.xml" />
-      <change type="MODIFICATION" beforePath="C:\Users\gabriel\Documents\Projects\Android\CalculatorInputView\calculatorInputView\build.gradle" afterPath="$PROJECT_DIR$/calculatorInputView/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example/example.iml" afterPath="$PROJECT_DIR$/example/example.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CalculatorInputView.iws" />
     <ignored path=".idea/workspace.xml" />
