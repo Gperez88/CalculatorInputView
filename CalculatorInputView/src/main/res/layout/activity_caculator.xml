@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true" />
 
-    <EditText
+    <com.gp89developers.calculatorinputview.widget.NumericEditText
         android:id="@+id/number_inputText"
         style="@style/AppTheme.InputCalculatorText"
         android:layout_width="match_parent"

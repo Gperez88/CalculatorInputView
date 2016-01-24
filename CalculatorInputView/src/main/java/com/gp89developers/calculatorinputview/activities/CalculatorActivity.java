@@ -9,18 +9,16 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.gp89developers.calculatorinputview.R;
 import com.gp89developers.calculatorinputview.utils.Operators;
+import com.gp89developers.calculatorinputview.widget.NumericEditText;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class CalculatorActivity extends AppCompatActivity {
     public static final int NUMBER_EDIT_TEXT_MAX_LENGTH = 30;
@@ -41,8 +39,10 @@ public class CalculatorActivity extends AppCompatActivity {
     public static final String OPERATOR_EXECUTE = "operatorExecute";
     public static final String ZERO_ZERO_ZERO = "000";
 
+    private DecimalFormat decimalFormat;
+
     //input
-    private EditText inputNumberText;
+    private NumericEditText inputNumberText;
     private TextView developmentOperationInputText;
 
     //button operation
@@ -142,13 +142,18 @@ public class CalculatorActivity extends AppCompatActivity {
 
 
     private void initComponents() {
+        DecimalFormatSymbols decimalFormatSymbols = new DecimalFormatSymbols();
+        decimalFormatSymbols.setGroupingSeparator(',');
+        decimalFormatSymbols.setDecimalSeparator('.');
+        decimalFormat = new DecimalFormat("#,###,##0.00", decimalFormatSymbols);
+
         setTitle(getIntent().getStringExtra(TITLE_ACTIVITY));
 
         String value = TextUtils.isEmpty(getIntent().getStringExtra(VALUE)) ? ZERO : getIntent().getStringExtra(VALUE);
 
         developmentOperationInputText = (TextView) findViewById(R.id.developing_operation_inputText);
 
-        inputNumberText = (EditText) findViewById(R.id.number_inputText);
+        inputNumberText = (NumericEditText) findViewById(R.id.number_inputText);
         inputNumberText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(NUMBER_EDIT_TEXT_MAX_LENGTH)});
         inputNumberText.setText(value);
 
@@ -284,9 +289,9 @@ public class CalculatorActivity extends AppCompatActivity {
         }
 
         if (firstValue == null) {
-            firstValue = Double.parseDouble(inputNumberText.getText().toString());
+            firstValue = Double.parseDouble(inputNumberText.getText().toString().replaceAll(",", ""));
         } else if (secondsValue == null) {
-            secondsValue = Double.parseDouble(inputNumberText.getText().toString());
+            secondsValue = Double.parseDouble(inputNumberText.getText().toString().replaceAll(",", ""));
 
             if (!clickEqualOperator) {
                 executeOperation(operatorExecute);
@@ -334,18 +339,12 @@ public class CalculatorActivity extends AppCompatActivity {
             return;
         }
 
-        Pattern decimalPattern = Pattern.compile("[0-9]*+((\\.[0-9]{0,2})?)||(\\.)?");
-
         String oldValue = inputNumberText.getText().toString();
         String newValue = clearInput || (oldValue.equals(ZERO) && !value.equals(POINT)) ? value : oldValue + value;
         newValue = oldValue.equals(ZERO) && value.equals(ZERO_ZERO_ZERO) ? oldValue : newValue;
 
-        Matcher matcher = decimalPattern.matcher(newValue);
-        if (!matcher.matches()) {
-            inputNumberText.setText(oldValue);
-        } else {
-            inputNumberText.setText(newValue);
-        }
+        inputNumberText.setText(newValue);
+
         clearInput = false;
     }
 
@@ -412,10 +411,6 @@ public class CalculatorActivity extends AppCompatActivity {
     }
 
     private String formatValue(double value) {
-        DecimalFormatSymbols decimalFormatSymbols = new DecimalFormatSymbols();
-        decimalFormatSymbols.setDecimalSeparator('.');
-        DecimalFormat decimalFormat = new DecimalFormat("#0.00", decimalFormatSymbols);
-
         String valueStr = decimalFormat.format(value);
 
         String integerValue = valueStr.substring(0, valueStr.indexOf(POINT));
