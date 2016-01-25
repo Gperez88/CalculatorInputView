@@ -5,6 +5,7 @@ With CalculatorInputView you can add functionality to a calculation EDITTEXT.
 ![](https://github.com/Gperez88/CalculatorInputView/blob/master/screen/c2.png)
 ![](https://github.com/Gperez88/CalculatorInputView/blob/master/screen/c3.png)
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-CalculatorInputView-green.svg?style=true)](https://android-arsenal.com/details/1/3059)
 
 ## Usage
 
