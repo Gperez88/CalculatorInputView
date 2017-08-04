@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/Gperez88/CalculatorInputView'
     gitUrl = 'https://github.com/Gperez88/CalculatorInputView.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.2'
 
     developerId = 'gperez88'
     developerName = 'gabriel perez'
@@ -32,7 +32,7 @@ android {
         minSdkVersion 10
         targetSdkVersion 25
         versionCode 3
-        versionName "1.0.0"
+        versionName "1.0.2"
     }
 
     buildTypes {
