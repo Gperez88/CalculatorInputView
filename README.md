@@ -14,7 +14,7 @@ With CalculatorInputView you can add functionality to a calculation EditText.
 ### Add the dependency to the application level build.gradle
 ```gradle
 dependencies {
-    compile 'com.github.gperez88:CalculatorInputView:0.0.3'
+    compile 'com.github.gperez88:CalculatorInputView:1.0.2'
 }
 ```
 
