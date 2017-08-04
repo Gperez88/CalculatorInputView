@@ -1,18 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        debug {
-        }
-        release {
-        }
-    }
-    compileSdkVersion 23
-    buildToolsVersion '25.0.0'
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
     defaultConfig {
         applicationId "com.gp89developers.example"
         minSdkVersion 10
-        targetSdkVersion 23
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
     }
@@ -26,7 +21,6 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':calculatorInputView')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile project(':library')
+    compile "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
 }
