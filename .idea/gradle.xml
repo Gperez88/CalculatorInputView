@@ -9,10 +9,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/calculatorInputView" />
+            <option value="$PROJECT_DIR$/CalculatorInputView" />
             <option value="$PROJECT_DIR$/example" />
           </set>
         </option>
+        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
   </component>
