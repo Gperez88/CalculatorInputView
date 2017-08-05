@@ -1,0 +1,69 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'calculator-input-view'
+
+    publishedGroupId = 'com.github.gperez88'
+    libraryName = 'CalculatorInputView'
+    artifact = 'calculatorInputView'
+
+    libraryDescription = 'With CalculatorInputView you can add functionality to a calculation EditText Android'
+
+    siteUrl = 'https://github.com/Gperez88/CalculatorInputView'
+    gitUrl = 'https://github.com/Gperez88/CalculatorInputView.git'
+
+    libraryVersion = '1.0.2'
+
+    developerId = 'gperez88'
+    developerName = 'gabriel perez'
+    developerEmail = 'perezgabriel89@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion 10
+        targetSdkVersion 25
+        versionCode 3
+        versionName "1.0.2"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            assets {
+                srcDir 'assets'
+            }
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
+    compile "com.android.support:gridlayout-v7:${rootProject.ext.supportLibVersion}"
+    compile "com.android.support:design:${rootProject.ext.supportLibVersion}"
+    compile 'org.apache.commons:commons-lang3:3.4'
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

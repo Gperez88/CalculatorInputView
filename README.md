@@ -1,35 +1,24 @@
 # CalculatorInputView
-With CalculatorInputView you can add functionality to a calculation EDITTEXT.
+With CalculatorInputView you can add functionality to a calculation EditText.
 
-![](https://github.com/Gperez88/CalculatorInputView/blob/master/screen/c1.png)
-![](https://github.com/Gperez88/CalculatorInputView/blob/master/screen/c2.png)
-![](https://github.com/Gperez88/CalculatorInputView/blob/master/screen/c3.png)
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Gperez88/CalculatorInputView/master/screen/c1.png" width="200">
+    <img src="https://raw.githubusercontent.com/Gperez88/CalculatorInputView/master/screen/c2.png" width="200">
+    <img src="https://raw.githubusercontent.com/Gperez88/CalculatorInputView/master/screen/c3.png" width="200">
+</p>
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-CalculatorInputView-green.svg?style=true)](https://android-arsenal.com/details/1/3059)
 
 ## Usage
 
-### Add the dependencies to your gradle file:
-```java
-  dependencies {
-        compile 'com.github.gperez88:calculatorInputView:0.0.3'
-  }
+### Add the dependency to the application level build.gradle
+```gradle
+dependencies {
+    compile 'com.github.gperez88:CalculatorInputView:1.0.2'
+}
 ```
 
-#### Manifest
-```xml
-<!-- CalculatorActivity -->
-<activity
-    android:name="com.gp89developers.calculatorinputview.activities.CalculatorActivity"
-    android:screenOrientation="portrait">
-    <intent-filter>
-        <action android:name="com.gp89developers.calculatorinputview.activities.CalculatorActivity" />
-        <category android:name="android.intent.category.DEFAULT" />
-    </intent-filter>
-</activity>
-```
-
-#### Layout 
+#### Example Layout 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -54,12 +43,10 @@ With CalculatorInputView you can add functionality to a calculation EDITTEXT.
 </RelativeLayout>
 ```
 
-#### Activity
+#### Example Activity
 ```java
 public class MainActivity extends AppCompatActivity {
-    public static final String PARENT_CLASS_SOURCE = "com.gp89developers.example.MainActivity";
-    public static final String TITLE = "CalculatorInputView";
-
+    private static final String TITLE = "CalculatorInputView";
     private EditText editText;
 
     @Override
@@ -71,12 +58,10 @@ public class MainActivity extends AppCompatActivity {
         editText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent calculatorIntent = new Intent(MainActivity.this, CalculatorActivity.class);
-                calculatorIntent.putExtra(CalculatorActivity.TITLE_ACTIVITY, TITLE);
-                calculatorIntent.putExtra(CalculatorActivity.PARENT_ACTIVITY, PARENT_CLASS_SOURCE);
-                calculatorIntent.putExtra(CalculatorActivity.VALUE, editText.getText().toString());
-
-                startActivityForResult(calculatorIntent, CalculatorActivity.REQUEST_RESULT_SUCCESSFUL);
+                new CalculatorBuilder()
+                    .withTitle(TITLE)
+                    .withValue(editText.getText().toString())
+                    .start(MainActivity.this);
             }
         });
     }
@@ -94,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 ```
 # Example
 
-[Example app](https://github.com/Gperez88/CalculatorInputView/tree/master/example)
+[Example app](example)
 
 # License
 
@@ -105,7 +90,3 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 [Apache License, Version 2.0](https://github.com/Gperez88/CalculatorInputView/blob/master/LICENSE)
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Gperez88/calculatorinputview/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
