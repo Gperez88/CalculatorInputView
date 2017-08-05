@@ -1,5 +1,5 @@
 # CalculatorInputView
-With CalculatorInputView you can add functionality to a calculation EditText.
+With Calculator InputView you can add functionality of calculation in an EditText.
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/Gperez88/CalculatorInputView/master/screen/c1.png" width="200">
