@@ -14,7 +14,7 @@ With Calculator InputView you can add functionality of calculation in an EditTex
 ### Add the dependency to the application level build.gradle
 ```gradle
 dependencies {
-    compile 'com.github.gperez88:CalculatorInputView:1.0.2'
+    compile 'com.github.gperez88:calculatorInputView:1.0.2'
 }
 ```
 
