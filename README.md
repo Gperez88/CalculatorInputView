@@ -1,5 +1,5 @@
 # CalculatorInputView
-With CalculatorInputView you can add functionality to a calculation EditText.
+With Calculator InputView you can add functionality of calculation in an EditText.
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/Gperez88/CalculatorInputView/master/screen/c1.png" width="200">
@@ -14,7 +14,7 @@ With CalculatorInputView you can add functionality to a calculation EditText.
 ### Add the dependency to the application level build.gradle
 ```gradle
 dependencies {
-    compile 'com.github.gperez88:CalculatorInputView:1.0.2'
+    compile 'com.github.gperez88:calculatorInputView:1.0.3'
 }
 ```
 
@@ -77,6 +77,40 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
+#### Example Fragment
+```java
+public class MainFragment extends Fragment {
+    private static final String TITLE = "CalculatorInputView";
+    private EditText editText;
+
+    @Override
+    protected void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        editText = (EditText) findViewById(R.id.editText);
+        editText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new CalculatorBuilder()
+                    .withTitle(TITLE)
+                    .withValue(editText.getText().toString())
+                    .start(MainFragment.this);
+            }
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == CalculatorActivity.REQUEST_RESULT_SUCCESSFUL) {
+            String result = data.getStringExtra(CalculatorActivity.RESULT);
+            editText.setText(result);
+        }
+    }
+}
+```
+
 # Example
 
 [Example app](example)
