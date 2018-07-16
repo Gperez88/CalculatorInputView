@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/Gperez88/CalculatorInputView'
     gitUrl = 'https://github.com/Gperez88/CalculatorInputView.git'
 
-    libraryVersion = '1.0.2'
+    libraryVersion = '1.0.3'
 
     developerId = 'gperez88'
     developerName = 'gabriel perez'
@@ -25,14 +25,15 @@ ext {
 }
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
-        minSdkVersion 10
-        targetSdkVersion 25
-        versionCode 3
-        versionName "1.0.2"
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 4
+        versionName "1.0.3"
     }
 
     buildTypes {
@@ -55,14 +56,14 @@ android {
     }
 }
 
-
-
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
-    compile "com.android.support:gridlayout-v7:${rootProject.ext.supportLibVersion}"
-    compile "com.android.support:design:${rootProject.ext.supportLibVersion}"
-    compile 'org.apache.commons:commons-lang3:3.4'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:gridlayout-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'org.apache.commons:commons-lang3:3.7'
+    implementation 'com.android.support:support-fragment:27.1.1'
+
 }
 
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
